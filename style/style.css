@@ -1,5 +1,13 @@
-/*Estilo geral*/
+/*Paleta de cores usada*/
+:root{
+  --corPrincipal:blue;
+  --corSecundaria: cyan;
+  --corFundo: whitesmoke;
+  --corFonte: black;
+  --corMenu:black;
+}
 
+/*Estilo geral*/
 * {
   margin: 0;
   padding: 0;
@@ -13,13 +21,18 @@ html{
   scroll-behavior: smooth;
 }
 
+/*Cor das fontes*/
+h1, h2, p, li, a{
+  color:var(--corFonte);
+}
+
 h2.titulo {
   font-size: 40px;
   text-align: center;
 }
 
 span, a {
-  color: blue;
+  color: var(--corPrincipal);
   display: inline;
 }
 
@@ -28,7 +41,7 @@ span, a {
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: var(--corFundo);
   height: 100vh;
 }
 
@@ -40,18 +53,18 @@ body {
 /*Botões gerais de compras e inputs[submit]*/
 .btn-compre button,
 form .btn-enviar input[type="submit"] {
-  background-image: linear-gradient(to left, blue, cyan);
+  background-image: linear-gradient(to left, var(--corPrincipal), var(--corSecundaria));
   padding: 10px 40px;
   font-size: 15px;
   border: none;
   border-radius: 40px;
-  color: white;
+  color: var(--corFundo);
   transition: 0.3s;
 }
 
 .btn-compre button:hover,
 form .btn-enviar input[type="submit"]:hover {
-  box-shadow: 0px 0px 10px rgba(0, 234, 255, 0.606);
+  box-shadow: 0px 0px 10px var(--corSecundaria);
   transform: scale(1.05);
 }
 
@@ -66,7 +79,7 @@ form .btn-enviar input[type="submit"]:hover {
   height: 60px;
   border-radius: 50%;
   border: none;
-  background: cyan;
+  background: var(--corSecundaria);
   font-size: 24px;
   margin: 0 10px;
   transition: 0.4s;
@@ -74,7 +87,7 @@ form .btn-enviar input[type="submit"]:hover {
 
 .btn-social button:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 8px blue;
+  box-shadow: 0 0 8px var(--corPrincipal);
 }
 
 .logo img {
@@ -102,16 +115,16 @@ header .menu-desktop ul li {
 
 header .menu-desktop ul li a {
   text-decoration: none;
-  color: rgb(5, 5, 61);
+  color: var(--corPrincipal);
 }
 
 header .menu-desktop ul li:hover a {
-  color: rgb(15, 15, 192);
+  color: var(--corPrincipal);
 }
 
 header .menu-desktop ul li a::after {
   content: " ";
-  background: blue;
+  background: var(--corPrincipal);
   width: 0%;
   height: 2px;
   position: absolute;
@@ -146,7 +159,7 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site .text-topo-site span {
-  color: blue;
+  color: var(--corPrincipal);
 }
 
 .topo-do-site .interface .img-topo-site img {
@@ -185,7 +198,7 @@ section.especialidades .flex {
 
 .especialidades .especialidades-box i {
   font-size: 70px;
-  color: blue;
+  color: var(--corPrincipal);
 }
 
 .especialidades .especialidades-box h3 {
@@ -223,7 +236,7 @@ section.sobre .img-sobre img {
 
 .sobre .text-sobre span {
   display: block;
-  color: blue;
+  color: var(--corPrincipal);
 }
 
 .sobre .text-sobre p {
@@ -235,7 +248,7 @@ section.sobre .img-sobre img {
   height: 60px;
   border-radius: 50%;
   border: none;
-  background: cyan;
+  background: var(--corSecundaria);
   font-size: 24px;
   margin: 0 10px;
   transition: 0.4s;
@@ -243,7 +256,7 @@ section.sobre .img-sobre img {
 
 .btn-social button:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 8px blue;
+  box-shadow: 0 0 8px var(--corPrincipal);
 }
 
 /*Fim do sobre*/
@@ -364,11 +377,11 @@ footer .line-footer {
 }
 
 footer hr {
-  border: 1px solid blue;
+  border: 1px solid var(--corPrincipal);
 }
 
 footer .line-footer p i {
-  color: blue;
+  color: var(--corPrincipal);
   font-size: 25px;
 }
 
@@ -418,12 +431,12 @@ footer .line-footer p i {
   }
 
   .btn-abrir-menu {
-    color: blue;
+    color: var(--corPrincipal);
     font-size: 50px;
   }
 
   .menu-mobile {
-    background: white;
+    background: var(--corMenu);
     height: 100vh;
     position: fixed;
     top: 0;
@@ -448,7 +461,7 @@ footer .line-footer p i {
 
   .menu-mobile .btn-fechar i {
     font-size: 30px;
-    color: blue;
+    color: var(--corPrincipal);
   }
 
   header .menu-mobile nav ul {
@@ -460,14 +473,14 @@ footer .line-footer p i {
   }
   header .menu-mobile nav ul li a {
     text-decoration: none;
-    color: black;
+    color: var(--corFonte);
     font-size: 20px;
     display: block;
     padding: 20px 10%;
   }
 
   header .menu-mobile nav ul li a:hover {
-    background-color: blue;
+    background-color: var(--corPrincipal);
   }
 
   /*Topo-do-site*/
