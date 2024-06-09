@@ -474,7 +474,7 @@ footer .line-footer p i {
   }
   header .menu-mobile nav ul li a {
     text-decoration: none;
-    color: var(--corFonte);
+    color: white;
     font-size: 20px;
     display: block;
     padding: 20px 10%;
